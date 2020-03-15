@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Headlines</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+
+            <ion-segment scrollable>
+              <ion-segment-button *ngFor="let category of categories" (click)="onGetCategoryData(category)">
+                {{category}}
+              </ion-segment-button>
+            </ion-segment>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <app-articles [news]="news"></app-articles>
+</ion-content>
